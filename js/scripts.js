@@ -2,16 +2,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const sidebar = document.getElementById("sidebar");
     const hamburgerIcon = document.querySelector(".hamburger-icon");
     const sidebarLinks = document.querySelectorAll("#sidebar a"); // Select all links in the sidebar
+    const overlay = document.getElementById("overlay"); // Select the overlay element
 
     // Sidebar toggle functionality
     function toggleSidebar() {
         sidebar.classList.toggle("open");
+        overlay.classList.toggle("visible"); // Toggle the overlay visibility
     }
 
-    // Close sidebar when a link is clicked
+    // Close sidebar when a link or overlay is clicked
     function closeSidebar() {
         if (sidebar.classList.contains("open")) {
             sidebar.classList.remove("open");
+            overlay.classList.remove("visible"); // Hide the overlay
         }
     }
 
@@ -22,6 +25,9 @@ document.addEventListener("DOMContentLoaded", function () {
     sidebarLinks.forEach(link => {
         link.addEventListener("click", closeSidebar);
     });
+
+    // Attach click event to the overlay
+    overlay.addEventListener("click", closeSidebar);
 
     // Handle scroll event for larger screens
     function handleScroll() {
