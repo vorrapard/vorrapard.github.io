@@ -1,14 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
     const sidebar = document.getElementById("sidebar");
     const hamburgerIcon = document.querySelector(".hamburger-icon");
+    const sidebarLinks = document.querySelectorAll("#sidebar a"); // Select all links in the sidebar
 
     // Sidebar toggle functionality
     function toggleSidebar() {
         sidebar.classList.toggle("open");
     }
 
+    // Close sidebar when a link is clicked
+    function closeSidebar() {
+        if (sidebar.classList.contains("open")) {
+            sidebar.classList.remove("open");
+        }
+    }
+
     // Attach click event to the hamburger icon
     hamburgerIcon.addEventListener("click", toggleSidebar);
+
+    // Attach click events to each sidebar link
+    sidebarLinks.forEach(link => {
+        link.addEventListener("click", closeSidebar);
+    });
 
     // Handle scroll event for larger screens
     function handleScroll() {

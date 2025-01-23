@@ -290,6 +290,7 @@ h2 {
 
 /* Responsive Padding for Sections */
 section {
+    scroll-margin-top: 2rem;
     padding: 2rem 0;
 }
 
@@ -320,7 +321,7 @@ section {
         background-color: #0a192f;
         color: #ccd6f6;
         padding: 1rem;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
         z-index: 1000;
         display: flex;
         align-items: center;
@@ -354,7 +355,7 @@ section {
         left: 0;
         top: 0;
         padding: 4vh 2vw;
-        width: 50%; /* Sidebar takes 50% of the viewport width */
+        width: 70%; /* Sidebar takes 70% of the viewport width */
         background-color: #0a192f;
         height: 100%;
         display: flex;
@@ -426,7 +427,13 @@ section {
     }
 
     main {
-        margin-left: 0; /* Remove margin for full-width content */
+        margin: 2rem 0; /* Remove left margin add top margin for full-width content */
+        padding: 0vw 0vw; 
+    }
+
+    .research-container,
+    .projects-container {
+        padding: 0rem;
     }
 
     .project-card img {
