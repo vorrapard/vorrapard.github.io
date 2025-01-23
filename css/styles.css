@@ -261,6 +261,33 @@ h2 {
     border-bottom: 2px solid #233554;
 }
 
+/* Tags Container */
+.tags {
+    margin: 1rem 1rem 1rem;
+    display: flex; /* Align tags in a row */
+    flex-wrap: wrap; /* Allow wrapping if there are too many tags */
+    gap: 0.5rem; /* Space between tags */
+}
+
+/* Individual Tag Style */
+.tag {
+    display: inline-block;
+    background-color: #64ffda;
+    color: #0a192f; 
+    font-size: 0.75rem; 
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 15px; /* Rounded corners */
+    text-transform: uppercase; /* Capitalize the text */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Hover Effect for Tags */
+.tag:hover {
+    background-color: #7bf3e1; /* Slightly lighter background on hover */
+    color: #112240; /* Slightly darker text on hover */
+}
+
 /* Responsive Padding for Sections */
 section {
     padding: 2rem 0;
@@ -275,4 +302,139 @@ section {
     background-color: #0a192f; 
     color: #8892b0;
     border-top: 0.2vh solid #233554; 
+}
+
+
+/*----------------------- For mobile -------------------------*/
+/*
+/*
+/* For very small screens (like phones) */
+@media (max-width: 620px) {
+    /* Mobile Header */
+    #mobile-header {
+        display: none; /* Hidden by default, visible only on small screens */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #0a192f;
+        color: #ccd6f6;
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #mobile-header h1 {
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+    /* Hamburger Icon */
+    .hamburger-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 25px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    .hamburger-icon span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #ccd6f6;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+    #sidebar {
+        left: 0;
+        top: 0;
+        padding: 4vh 2vw;
+        width: 50%; /* Sidebar takes 50% of the viewport width */
+        background-color: #0a192f;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: all 0.3s ease;
+        transform: translateX(-100%); /* Off-screen */
+        transition: transform 0.3s ease;
+    }
+
+    /* Profile Section */
+    .profile img {
+        width: 50%; 
+        max-width: 30vw; /* Prevent image from getting too large */  
+        aspect-ratio: 1 / 1;  
+        border-radius: 50%; /* Circular image */
+        object-fit: cover;
+        margin-top: 3vh; 
+        margin-bottom: 2vh;
+        transition: opacity 0.3s ease;
+    }
+
+    .profile h1 {
+        font-size: 5vw; 
+        line-height: 5vw; 
+        color: #ccd6f6;
+        margin-bottom: 0.5vw;
+        transform: scale(1);
+        transform-origin: top center;
+        transition: transform 0.3s ease, line-height 0.3s ease; 
+    }
+
+    .profile h2 {
+        font-size: 2.5vw;
+        color: #8892b0;
+        transition: transform 0.3s ease, font-size 0.3s ease;
+    }
+
+    /* Navigation Links */
+    .sidebar-nav ul {
+        padding: 0;
+        margin: 10vh 2vw 0;
+        gap: 1rem;
+    }
+
+    .sidebar-nav a {
+        color: #ccd6f6;
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+        border-radius: 12px;
+        transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    /* Social Icons */
+    .social-icons {
+        gap: 5vw; 
+        margin: 6vw 6vw 6vw;
+    }
+
+    .social-icons a {
+        width: 8vw; 
+        height: 8vw; 
+        font-size: 5vw; 
+    }
+
+    #sidebar.open {
+        transform: translateX(0); /* Visible on-screen */
+    }
+
+    main {
+        margin-left: 0; /* Remove margin for full-width content */
+    }
+
+    .project-card img {
+        border-bottom: 0 solid #233554; /* Separation line */
+    }
+
+    #footer {
+        width: 90%; 
+        margin-left: 5%; 
+    }    
 }

@@ -10,6 +10,16 @@
 </head>
 
 <body>
+    <!-- Mobile Header -->
+    <header id="mobile-header">
+        <div class="hamburger-icon" onclick="toggleSidebar()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!-- <h1>My Portfolio</h1> -->
+    </header>
+
     <!-- Sidebar -->
     <aside id="sidebar">
         <div class="profile" id="profile">
@@ -89,13 +99,21 @@
                     <div class="research-card">
                         <img src="images/Comparative_MDE.png" alt="Research 1">
                         <h3>Comparative Analysis of Monocular Depth Estimation Models</h3>
-                        <p>Brief description of the research project.</p>
+                        <div class="tags">
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">Depth Estimation</span>
+                        </div>
+                        <!-- <p>Fall 2024</p> -->
                         <a href="pdf/Comparative Analysis of Monocular Depth.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
                     </div>
                     <div class="research-card">
                         <img src="images/Optimizing_DAv2.png" alt="Research 2">
                         <h3>Optimizing Depth Anything V2 via Quantization and Pruning</h3>
-                        <p>Brief description of the research project.</p>
+                        <div class="tags">
+                            <span class="tag">Model Optimization</span>
+                            <span class="tag">Quantization</span>
+                        </div>
+                        <!-- <p>Fall 2024</p> -->
                         <a href="pdf/Optimizing Depth Anything V2 via Quantization and Pruning.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
                     </div>                   
                 </div>
@@ -107,14 +125,23 @@
                 <div class="project-card">
                     <img src="images/Tremor_detector.jpg" alt="Project 1">
                     <h3>Tremor Detector</h3>
-                    <p>Brief description of the project.</p>
+                    <div class="tags">
+                        <span class="tag">Embedded Systems</span>
+                        <span class="tag">Signal Processing</span>
+                    </div>
+                    <p>Detecting resting tremor with built-in gyroscope</p>
                     <a href="https://github.com/vorrapard/Tremor-Detector" target="_blank" rel="noopener noreferrer">GitHub</a>
                     <a href="https://www.youtube.com/watch?v=6-RBzq2iQeA" target="_blank" rel="noopener noreferrer">Video</a>
                 </div>
                 <div class="project-card">
                     <img src="images/RoomHub.png" alt="Project 2">
                     <h3>RoomHub</h3>
-                    <p>Brief description of the project.</p>
+                    <div class="tags">
+                        <span class="tag">Web Development</span>
+                        <span class="tag">React</span>
+                        <span class="tag">Django</span>
+                    </div>
+                    <p>Website for roommate matching</p>
                     <a href="https://github.com/vorrapard/RoomHub" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
